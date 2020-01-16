@@ -1,0 +1,13 @@
+#1
+x = str(raw_input('What do you want to palindromize?'))
+
+def pali (x):
+    str(y) = '' 
+    for i in range (len(x)-2,-1,1):
+        y = y + x[i]
+    return y
+
+print x + pali(x)
+
+#2
+x = 

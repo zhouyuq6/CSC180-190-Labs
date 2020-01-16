@@ -1,0 +1,21 @@
+def analyzeBoard(self):
+		if len(self.T)!=9:
+			return -1
+		while len(self.T)==9:
+			point = False
+			for i in range(0,len(self.T)):
+				if self.T[i]!= 0 and self.T[i]!=1 and self.T[i]!=2:
+					return -1
+					break
+				if self.T[i] == 0:
+					point = True
+		
+			if (self.T[0]==self.T[1]==self.T[2]==1 or self.T[3]==self.T[4]==self.T[5]==1 or self.T[6]==self.T[7]==self.T[8]==1 or self.T[0]==self.T[3]==self.T[6]==1 or self.T[1]==self.T[4]==self.T[7]==1 or self.T[2]==self.T[5]==self.T[8]==1 or self.T[0]==self.T[4]==self.T[8]==1 or self.T[2]==self.T[4]==self.T[6]==1):
+				return 1
+			elif (self.T[0]==self.T[1]==self.T[2]==2 or self.T[3]==self.T[4]==self.T[5]==2 or self.T[6]==self.T[7]==self.T[8]==2 or self.T[0]==self.T[3]==self.T[6]==2 or self.T[1]==self.T[4]==self.T[7]==2 or self.T[2]==self.T[5]==self.T[8]==2 or self.T[0]==self.T[4]==self.T[8]==2 or self.T[2]==self.T[4]==self.T[6]==2):
+				return 2
+			elif point:
+				return 0
+			else:
+				return 3
+	
